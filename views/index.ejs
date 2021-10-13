@@ -9,13 +9,13 @@
 		<input type="" name="n1" value= <%= n1 %>>
 		<input type="" name="n2" value=<%= n2 %>>
 		<button>Add</button>
+		<br>
 
-			<span id="result" style="background: yellow;"><%= result %></span>
-
-
-			<span id="result" style="background: orange;"><%= result %></span>
-
-		
+		<% if(result%2==0){ %>
+		<span id="resultt" style="background: yellow;"><%= result %></span>
+		<% }  else { %>	
+		<span id="resultt" style="background: orange;"><%= result %></span>
+		<% } %>
 		
 	</form>
 
