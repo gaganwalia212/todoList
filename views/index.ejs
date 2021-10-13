@@ -1,25 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8"><!DOCTYPE html>
+<html>
+<head>
 	<meta charset="utf-8">
-	<title>Calculator</title>
+	<title>Todo List</title>
 </head>
 <body>
-	<form method="post" action="/">
-		<input type="" name="n1" value= <%= n1 %>>
-		<input type="" name="n2" value=<%= n2 %>>
-		<button>Add</button>
-		<br>
-
-		<% if(result%2==0){ %>
-		<span id="resultt" style="background: yellow;"><%= result %></span>
-		<% }  else { %>	
-		<span id="resultt" style="background: orange;"><%= result %></span>
+	<header>
+		<span><%= englishDay %></span>
+		<span><%= hindiDay %></span>
+	</header>
+	<ul>
+		<% console.log(newItem) %>
+		<li>Bring vegetables</li>
+		<li>Cook food</li>
+		<li>Eat food</li>
+		<% for (var i =0; i < newItem.length;  i++ ) { %>
+		<li>  <%= newItem[i] %> </li>
 		<% } %>
 		
-	</form>
+	</ul>
 
-	<script type="text/javascript" src="app.js"></script>
+	<form method="post" action="/">
+		<input type="" name="task" placeholder="Enter Task">
+		<br>
+		<button>+</button>
+	</form>
 
 </body>
 </html>
