@@ -13,9 +13,14 @@
 		<span><%= hindiDay %></span>
 	</header>
 	<ul>
+		<% console.log(newItem) %>
 		<li>Bring vegetables</li>
 		<li>Cook food</li>
 		<li>Eat food</li>
+		<% for (var i =0; i < newItem.length;  i++ ) { %>
+		<li>  <%= newItem[i] %> </li>
+		<% } %>
+		
 	</ul>
 
 	<form method="post" action="/">
