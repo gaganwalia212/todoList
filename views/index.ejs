@@ -1,33 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8"><!DOCTYPE html>
-<html>
-<head>
 	<meta charset="utf-8">
 	<title>Todo List</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Annie+Use+Your+Telescope&family=Kalam:wght@300&display=swap" rel="stylesheet">
 </head>
-<body>
-	<header>
-		<span><%= englishDay %></span>
-		<span><%= hindiDay %></span>
+<body class="primitive">
+	<header id="header">
+		<span class="l3 vertical-center bg-orange ">  <%= englishDay %></span>
+		<span class=" l1 vertical-center">Todo List</span>
+		<span class=" l3 vertical-center bg-orange hindi"><%= hindiDay %>  </span>
 	</header>
-	<ul>
-		<% console.log(newItem) %>
-		<li>Bring vegetables</li>
-		<li>Cook food</li>
-		<li>Eat food</li>
+	<main class="l4">
+		<ul>
+			
+		<li><input type="checkbox"> <span>Bring vegetables</span></li>
+		<li><input type="checkbox"> <span>Cook food</span></li>
+		<li><input type="checkbox"> <span>Eat food</span></li>
 		<% for (var i =0; i < newItem.length;  i++ ) { %>
-		<li>  <%= newItem[i] %> </li>
+		<li> <input type="checkbox"> <span> <%= newItem[i] %> </span></li>
 		<% } %>
 		
-	</ul>
+		<li>
+			<form method="post" action="/">
+				<input type="" name="task" placeholder="Enter Task">
+				<button class="bg-orange">+</button>
+			</form>
+		</li>
 
-	<form method="post" action="/">
-		<input type="" name="task" placeholder="Enter Task">
-		<br>
-		<button>+</button>
-	</form>
+			
+		</ul>
+		
+		
+	</main>
+	
+
+	
 
 </body>
 </html>

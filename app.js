@@ -5,6 +5,7 @@ app=express()
 
 app.set('view engine','ejs')
 app.use(bodyParesr.urlencoded({extended:true}))
+app.use(express.static("public"))
 
 
 app.listen(3000,function(){
@@ -14,8 +15,8 @@ var task=[]
 app.get("/",function(req,res){
 	var options = {  year: 'numeric', month: 'long', day: 'numeric',weekday: 'long' };
 	var today  = new Date();
-	var hindiDay=today.toLocaleDateString("en-US",options)
-	var englishDay=today.toLocaleDateString("hi-IN",options)
+	var hindiDay=today.toLocaleDateString("hi-IN",options)
+	var englishDay=today.toLocaleDateString("en-US",options)
 	res.render('index',{hindiDay:hindiDay,englishDay:englishDay,newItem:task})
 	
 })
